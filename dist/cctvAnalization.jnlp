@@ -7,9 +7,9 @@
     <offline-allowed/>
   </information>
   <resources>
-    <j2se version="1.6+" java-vm-args="-Djava.library.path=/home/student/Desktop/opencv.original/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="cctvAnalization.jar" size="4146" download="eager" />
-    <jar href="lib/opencv-310.jar" size="312728" download="eager" />
+    <j2se version="1.6+" java-vm-args="-Djava.library.path=/home/iftekher/Desktop/opencv.original/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="cctvAnalization.jar" size="6193" download="eager" />
+    <jar href="lib/opencv-310.jar" size="350455" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="cctvAnalization" >
     <param name="requiredFXVersion" value="8.0+"/>

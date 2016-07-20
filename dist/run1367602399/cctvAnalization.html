@@ -1,0 +1,47 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'cctvAnalization.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJjY3R2QW5hbGl6YXRpb24uam5scCI+CiAgPGluZm9ybWF0aW9uPgogICAgPHRpdGxlPmNjdHZBbmFsaXphdGlvbjwvdGl0bGU+CiAgICA8dmVuZG9yPnN0dWRlbnQ8L3ZlbmRvcj4KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4KICAgIDxvZmZsaW5lLWFsbG93ZWQvPgogIDwvaW5mb3JtYXRpb24+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0vaG9tZS9pZnRla2hlci9EZXNrdG9wL29wZW5jdi5vcmlnaW5hbC9idWlsZC9saWIgIiAgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPgogICAgPGphciBocmVmPSJjY3R2QW5hbGl6YXRpb24uamFyIiBzaXplPSI2MDM3IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgICA8amFyIGhyZWY9ImxpYi9vcGVuY3YtMzEwLmphciIgc2l6ZT0iMzUwNDU1IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgPC9yZXNvdXJjZXM+CiAgPGFwcGxldC1kZXNjICB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgbWFpbi1jbGFzcz0iY29tLmphdmFmeC5tYWluLk5vSmF2YUZYRmFsbGJhY2siICBuYW1lPSJjY3R2QW5hbGl6YXRpb24iID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjY3R2YW5hbGl6YXRpb24uQ2N0dkFuYWxpemF0aW9uIiAgbmFtZT0iY2N0dkFuYWxpemF0aW9uIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path=/home/iftekher/Desktop/opencv.original/build/lib '
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedcctvanalization() {
+        dtjava.embed(
+            {
+                id : 'cctvanalization',
+                url : 'cctvAnalization.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJjY3R2QW5hbGl6YXRpb24uam5scCI+CiAgPGluZm9ybWF0aW9uPgogICAgPHRpdGxlPmNjdHZBbmFsaXphdGlvbjwvdGl0bGU+CiAgICA8dmVuZG9yPnN0dWRlbnQ8L3ZlbmRvcj4KICAgIDxkZXNjcmlwdGlvbj5udWxsPC9kZXNjcmlwdGlvbj4KICAgIDxvZmZsaW5lLWFsbG93ZWQvPgogIDwvaW5mb3JtYXRpb24+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0vaG9tZS9pZnRla2hlci9EZXNrdG9wL29wZW5jdi5vcmlnaW5hbC9idWlsZC9saWIgIiAgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPgogICAgPGphciBocmVmPSJjY3R2QW5hbGl6YXRpb24uamFyIiBzaXplPSI2MDM3IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgICA8amFyIGhyZWY9ImxpYi9vcGVuY3YtMzEwLmphciIgc2l6ZT0iMzUwNDU1IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgPC9yZXNvdXJjZXM+CiAgPGFwcGxldC1kZXNjICB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgbWFpbi1jbGFzcz0iY29tLmphdmFmeC5tYWluLk5vSmF2YUZYRmFsbGJhY2siICBuYW1lPSJjY3R2QW5hbGl6YXRpb24iID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjguMCsiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjY3R2YW5hbGl6YXRpb24uQ2N0dkFuYWxpemF0aW9uIiAgbmFtZT0iY2N0dkFuYWxpemF0aW9uIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path=/home/iftekher/Desktop/opencv.original/build/lib '
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedcctvanalization);
+</script>
+
+</head><body>
+<h2>Test page for <b>cctvAnalization</b></h2>
+  <b>Webstart:</b> <a href='cctvAnalization.jnlp' onclick="return launchApplication('cctvAnalization.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>
