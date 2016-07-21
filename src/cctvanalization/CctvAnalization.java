@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author student
+ * @author iftekher
  */
 public class CctvAnalization extends Application {
     

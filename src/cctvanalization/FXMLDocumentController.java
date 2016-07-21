@@ -45,11 +45,12 @@ import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import sun.audio.ContinuousAudioDataStream;
+import java.util.Properties;
 
 
 /**
  *
- * @author student
+ * @author iftekher
  */
 public class FXMLDocumentController implements Initializable {
     
@@ -205,10 +206,6 @@ public class FXMLDocumentController implements Initializable {
         applicationShouldClose = true;
     }
 
-    @FXML
-    private void handleStartAnalyzeAction(ActionEvent event) {
-        
-    }    
             
 //            System.out.println("Mat Value Put");
 //            String change = detectChange(subtraction);
@@ -260,7 +257,7 @@ public class FXMLDocumentController implements Initializable {
     
     public void ringAlarm(){
         try {
-                in = new FileInputStream("alarm/Terminator.wav");
+                in = new FileInputStream("alarm/alarm2.wav");
                 as = new AudioStream(in);
                 data = as.getData();
                 cas = new ContinuousAudioDataStream(data);
@@ -275,6 +272,14 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleStopAlarmAction(ActionEvent event) {
         AudioPlayer.player.start(cas);
+    }
+    
+    public void saveFootage(){
+        
+    }
+    
+    public void sendEmail(){
+        
     }
      
 }

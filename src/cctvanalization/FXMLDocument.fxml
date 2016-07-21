@@ -15,7 +15,6 @@
               <items>
                 <Button mnemonicParsing="false" onAction="#handleStartCameraAction" text="Start Camera" />
                   <Button mnemonicParsing="false" onAction="#handleStopCameraAction" text="Stop Camera" />
-                  <Button mnemonicParsing="false" onAction="#handleStartAnalyzeAction" text="Start Analyze" />
                   <Button mnemonicParsing="false" onAction="#handleStopAlarmAction" text="Stop Alarm" />
               </items>
             </ToolBar>
