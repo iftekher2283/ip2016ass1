@@ -5,7 +5,9 @@
  */
 package cctvanalization;
 
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -27,6 +29,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import javax.imageio.ImageIO;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
@@ -49,6 +52,10 @@ public class FXMLDocumentController implements Initializable {
 
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    }
+
+    private static BufferedImage toBufferedImage(File file) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @FXML
@@ -124,6 +131,7 @@ public class FXMLDocumentController implements Initializable {
                             }
                             if(alarmCont == 1){
                                 ringAlarm();
+                                saveFrame(currentFrame, "changedFrame", "png");
                                 alarmCont = 2;
                             }
                             break;
@@ -281,5 +289,15 @@ public class FXMLDocumentController implements Initializable {
     public void sendEmail(){
         
     }
-     
+    
+    private static void saveFrame(Mat currentFrame, String fileName, String ext) {
+        File file = new File(fileName + "." + ext);
+        BufferedImage image = new BufferedImage(currentFrame.width(), currentFrame.height(), BufferedImage.TYPE_BYTE_GRAY);
+        try {
+            ImageIO.write(image, ext, file);  // ignore returned boolean
+        } catch(IOException e) {
+        System.out.println("Write error for " + file.getPath() +
+                                        ": " + e.getMessage());
+        }
+    }
 }
