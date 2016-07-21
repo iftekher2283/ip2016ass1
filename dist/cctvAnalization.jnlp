@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" java-vm-args="-Djava.library.path=/home/iftekher/Desktop/opencv.original/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="cctvAnalization.jar" size="6190" download="eager" />
+    <jar href="cctvAnalization.jar" size="6248" download="eager" />
     <jar href="lib/opencv-310.jar" size="350455" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="cctvAnalization" >

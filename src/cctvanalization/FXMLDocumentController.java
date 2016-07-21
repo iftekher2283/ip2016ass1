@@ -5,19 +5,14 @@
  */
 package cctvanalization;
 
-import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.security.Security;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -31,10 +26,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
-import javafx.stage.FileChooser;
 import javafx.util.Duration;
-import javax.imageio.ImageIO;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
@@ -45,7 +37,6 @@ import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import sun.audio.ContinuousAudioDataStream;
-import java.util.Properties;
 
 
 /**
@@ -76,6 +67,8 @@ public class FXMLDocumentController implements Initializable {
     private AudioStream as;
     private AudioData data;
     private ContinuousAudioDataStream cas;
+    
+    private int alarmCont = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -126,7 +119,13 @@ public class FXMLDocumentController implements Initializable {
                         }
                         if (changes > 40){
                             System.out.println("ChangeFound");
-                            ringAlarm();
+                            if(alarmCont == 0){
+                                alarmCont = 1;
+                            }
+                            if(alarmCont == 1){
+                                ringAlarm();
+                                alarmCont = 2;
+                            }
                             break;
                         }
                     }   
@@ -257,20 +256,21 @@ public class FXMLDocumentController implements Initializable {
     
     public void ringAlarm(){
         try {
-                in = new FileInputStream("alarm/alarm2.wav");
-                as = new AudioStream(in);
-                data = as.getData();
-                cas = new ContinuousAudioDataStream(data);
-                AudioPlayer.player.start(cas);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(CctvAnalization.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(CctvAnalization.class.getName()).log(Level.SEVERE, null, ex);
+            in = new FileInputStream("alarm/CoastGuard.wav");
+            as = new AudioStream(in);
+            data = as.getData();
+            cas = new ContinuousAudioDataStream(data);
+            AudioPlayer.player.start(cas);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(CctvAnalization.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(CctvAnalization.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+     }
 
     @FXML
     private void handleStopAlarmAction(ActionEvent event) {
+        alarmCont = 0;
         AudioPlayer.player.start(cas);
     }
     
